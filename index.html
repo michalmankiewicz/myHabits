@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>MyHabit</title>
+    <meta
+      name="description"
+      content="Project created for tracking daily rutines"
+    />
+    <meta name="author" content="Michal Mankiewicz" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="/src/css/style.css" />
+
+    <script type="module" defer src="src/js/controller.js"></script>
+    <script src="https://unpkg.com/phosphor-icons"></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <header>
+        <div id="title"><span id="title-small">my</span>Habits</div>
+        <nav>
+          <a href="#programming" data-type="programming" class="link-activity"
+            >Programming
+          </a>
+
+          <a href="#sports" data-type="sports" class="link-activity">Sports</a>
+
+          <a href="#reading" data-type="reading" class="link-activity"
+            >Reading
+          </a>
+          <a href="#sleep" data-type="sleep" class="link-activity">Sleep</a>
+        </nav>
+      </header>
+      <div class="section section-activities">
+        <form class="form">
+          <h2 class="form__header">Insert your activity:</h2>
+          <div class="form__column">
+            <div class="form__column--label">Date:</div>
+            <input
+              class="form__input form__input--date"
+              type="date"
+              lang="en"
+            />
+          </div>
+          <div class="form__column">
+            <div class="form__column--label">Duration:</div>
+            <input
+              class="form__input form__input--duration"
+              placeholder="hours"
+            />
+          </div>
+          <button class="form__btn"></button>
+        </form>
+        <div class="activities">
+          <h2>Activities history:</h2>
+
+          <ul class="activities-list">
+            <!-- <li class="activity activity--programming">
+              <h2>💻 Programming on April 22 (3h)</h2>
+              <i class="ph-x-circle-fill activity-delete"></i>
+            </li>
+            <li class="activity activity--programming">
+              <h2>Programming on April 22 (3h) ✅</h2>
+              <i class="ph-trash activity-deletee"></i>
+            </li>
+            <li class="activity activity--programming">
+              <h2>Programming on April 22 (3h) ✅</h2>
+            </li>
+            <li class="activity activity--programming">
+              <h2>Programming on April 22 (3h) ✅</h2>
+            </li>
+            <li class="activity activity--programming">
+              <h2>Programming on April 22 (3h) ✅</h2>
+            </li>
+            <li class="activity activity--programming">
+              <h2>Programming on April 22 (3h) ✅</h2>
+            </li>
+
+            <li class="activity activity--programming">
+              <h2>Programming on April 22 (3h) ✅</h2>
+            </li>
+            <li class="activity activity--programming">
+              <h2>Programming on April 22 (3h) ✅</h2>
+            </li>
+            <li class="activity activity--programming">
+              <h2>Programming on April 22 (3h) ✅</h2>
+            </li> -->
+          </ul>
+        </div>
+      </div>
+      <div class="section section-calendar">
+        <div class="calendar hidden">
+          <div class="calendar-header">
+            <svg
+              data-goto="-1"
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6 arrow arrow-prev"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M15 19l-7-7 7-7"
+              />
+            </svg>
+            <div class="calendar-description">
+              <div class="month">JULY</div>
+              <div class="year">2022</div>
+            </div>
+            <svg
+              data-goto="1"
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6 arrow arrow next"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M9 5l7 7-7 7"
+              />
+            </svg>
+          </div>
+
+          <div class="calendar-inner">
+            <div class="weekdays">
+              <div>Sun</div>
+              <div>Mon</div>
+              <div>Tue</div>
+              <div>Wed</div>
+              <div>Thu</div>
+              <div>Fri</div>
+              <div>Sat</div>
+            </div>
+
+            <div class="dates">
+              <div class="prev-date">27</div>
+              <div class="prev-date">28</div>
+              <div class="prev-date">29</div>
+              <div class="date">1</div>
+              <div class="date">2</div>
+              <div class="date">3</div>
+              <div class="date">4</div>
+              <div class="date">5</div>
+              <div class="date">6</div>
+              <div class="date">7</div>
+              <div class="date">8</div>
+              <div class="date">9</div>
+              <div class="date">10</div>
+              <div class="date">11</div>
+              <div class="date">12</div>
+              <div class="date">13</div>
+              <div class="date">14</div>
+              <div class="date">15</div>
+              <div class="date">16</div>
+              <div class="date">17</div>
+              <div class="date">18</div>
+              <div class="date">19</div>
+              <div class="date">20</div>
+              <div class="date">21</div>
+              <div class="date">22</div>
+              <div class="date">23</div>
+              <div class="date">24</div>
+              <div class="date">25</div>
+              <div class="date">26</div>
+              <div class="date">27</div>
+              <div class="date">28</div>
+              <div class="date">29</div>
+              <div class="date">30</div>
+              <div class="date">31</div>
+              <div class="next-date">1</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="message"></div>
+      </div>
+      <div class="section section-statistics">
+        <!-- <div class="statistics-container"> -->
+        <div class="summary hidden day-streak">
+          <div class="summary-details">
+            <div class="summary-value" id="day-streak"></div>
+            <!-- <i class="summary-icon ph-fire-simple-fill"></i> -->
+            <div class="summary-icon">🔥</div>
+          </div>
+          <div class="summary-label">DAY STREAK</div>
+        </div>
+
+        <div class="summary hidden summary-weekly">
+          <div class="summary-details">
+            <i class="summary-icon ph-calendar"></i>
+            <div class="summary-value" id="weekly-sum"></div>
+          </div>
+          <div class="summary-label">HOURS IN WEEK</div>
+        </div>
+        <div class="summary hidden summary-mothly">
+          <div class="summary-details">
+            <i class="summary-icon ph-calendar"></i>
+            <div class="summary-value" id="monthly-sum"></div>
+          </div>
+          <div class="summary-label">HOURS IN MONTH</div>
+        </div>
+        <div class="summary hidden summary-yearly">
+          <div class="summary-details">
+            <i class="summary-icon ph-calendar"></i>
+            <div class="summary-value" id="annual-sum"></div>
+          </div>
+          <div class="summary-label">HOURS IN YEAR</div>
+        </div>
+        <!-- </div> -->
+      </div>
+      <footer>
+        <div class="footer-icons">
+          <a class="icon" href="#"> <i class="ph-facebook-logo"></i></a>
+          <a class="icon" href="#"><i class="ph-instagram-logo"></i></a>
+          <a class="icon" href="#"><i class="ph-linkedin-logo"></i></a>
+          <a class="icon" href="https://twitter.com/mankiewicz47"
+            ><i class="ph-twitter-logo"></i
+          ></a>
+        </div>
+        <div class="footer-text">
+          &copy; All Rights Reserved by <span>Michał Mańkiewicz</span>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

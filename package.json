@@ -1,0 +1,19 @@
+{
+  "name": "myhabit",
+  "version": "1.0.0",
+  "description": "",
+  "default": "index.js",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html --dist-dir ./dist"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.6.0"
+  },
+  "dependencies": {
+    "color-calendar": "^1.0.7",
+    "date-streaks": "^1.2.1"
+  }
+}
