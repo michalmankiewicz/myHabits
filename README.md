@@ -18,21 +18,21 @@ External Library: date-streaks (https://github.com/jonsamp/date-streaks#readme)
 ## Features
 
 ### Adding, deleting new activity,
-Each time user is inserting activity by sumbiting a form the new Activity object is created. Then depending of type of activity (programming, sports, reading, sleep) activity is pushed to state object in corresponding type. 
+Each time user is inserting activity by sumbiting a form the new Activity object is created. Then depending on type of activity (programming, sports, reading, sleep) the new Activity object is updated in state.activities object.
 
 Activity object consist of type, date, duration, id and description.
 
-Deleteing activity can be achieved by clicking cross in top-right corner of each activity. Then depending of type of activity (programming, sports, reading, sleep) actvity is slice from array (by use of id).
+Deleting activity can be achieved by clicking cross in top-right corner of each activity. Then depending on type of activity (programming, sports, reading, sleep) actvity is slice from array (by use of id).
 
 ### List rendering
-List of activities is rendered each time state.actvities array is updated. By use of sort() method, list is sorted due to activities dates.
+List of activities is rendered each time state.activities array is updated. By use of sort() method, list is sorted due to activities dates.
 
 ### Form
-Form allow user to create new activity only when both of values (date, duration) are inserted and duration is higher than zero.
+Form allows user to create new activity only when both of the values (date, duration) are inserted and duration is biggerthan zero.
  
 ### Calendar rendering
-Calendar is programmed from the scratch and show user today's date and all activities in current or past month.
+Calendar is programmed from the scratch and shows user today's date and all activities in current or past month.
 
 ### Statistics
-Statistics section allow user to check duration summary (weekly, monthly, annualy) and activity's streak. Summary is calculated in my code with use of filter and reduce methods. Whereas current streak value is achieved by use of 'date-streak' library.
+Statistics section allows user to check duration summary (weekly, monthly, annualy) and activity's streak. Summary is calculated in my code with use of filter and reduce methods. Whereas current streak value is achieved by use of 'date-streak' library.
 
